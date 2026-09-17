@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 스마트간편장부</title>
+<meta name="description" content="스마트간편장부(kr.devai.splg) 개인정보처리방침">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1a1a; --muted:#5d5d5d; --rule:#e2e2e2;
+    --accent:#1c5d99; --card:#f6f7f9; --warn-bg:#fff6e5; --warn-fg:#7a4b00; --warn-rule:#e8c98a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14161a; --fg:#e8e8e8; --muted:#a2a6ad; --rule:#2c3038;
+      --accent:#7db3e8; --card:#1c1f25; --warn-bg:#2e2412; --warn-fg:#f0c987; --warn-rule:#5a4620;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+    font-size:17px; line-height:1.75; word-break:keep-all; overflow-wrap:break-word;
+  }
+  main{max-width:46rem; margin:0 auto; padding:3rem 1.25rem 6rem}
+  h1{font-size:1.85rem; line-height:1.3; margin:0 0 .4rem}
+  h2{font-size:1.2rem; margin:2.75rem 0 .75rem; padding-top:1.25rem; border-top:1px solid var(--rule)}
+  h3{font-size:1rem; margin:1.75rem 0 .5rem}
+  p,ul,ol{margin:0 0 1rem}
+  ul,ol{padding-left:1.4rem}
+  li{margin-bottom:.4rem}
+  a{color:var(--accent)}
+  strong{font-weight:600}
+  .meta{color:var(--muted); font-size:.9rem; margin-bottom:2rem}
+  .lede{font-size:1.1rem; background:var(--card); border-radius:.6rem; padding:1.1rem 1.25rem; margin-bottom:2rem}
+  .draft{background:var(--warn-bg); color:var(--warn-fg); border:1px solid var(--warn-rule);
+         border-radius:.6rem; padding:.9rem 1.1rem; margin-bottom:2rem; font-size:.92rem}
+  table{width:100%; border-collapse:collapse; margin:0 0 1rem; font-size:.95rem}
+  th,td{text-align:left; padding:.6rem .5rem; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{font-weight:600; color:var(--muted); font-size:.85rem}
+  .tw{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  footer{margin-top:3.5rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+         color:var(--muted); font-size:.88rem}
+  @media print{ .draft{display:none} body{font-size:11pt} }
+</style>
+</head>
+<body>
+<main>
+
+<h1>개인정보처리방침</h1>
+<p class="meta">
+  스마트간편장부 (Android <code>kr.devai.splg</code> · iOS <code>kr.devai.splg</code>)<br>
+  시행일 2026-10-01 · 버전 1.0
+</p>
+
+<p class="lede">
+  <strong>이 앱은 회원님의 장부를 서버로 보내지 않습니다.</strong>
+  거래 내역·거래처·사업자 정보·영수증 사진은 모두 기기 안에만 저장되며, 그 파일은 암호화됩니다.
+  회원가입이 없고 계정도 없습니다. 앱이 외부와 주고받는 통신은 아래 2절에 적은 두 가지가 전부입니다.
+</p>
+
+<h2>1. 수집하지 않는 것</h2>
+<p>
+  DEV-AI(이하 “개발자”)은 이 앱을 통해
+  <strong>회원님의 개인정보를 수집하거나 보관하지 않습니다.</strong>
+  회원가입·로그인 절차가 없고, 개발자가 운영하는 회원 데이터베이스가 존재하지 않습니다.
+</p>
+<p>앱에 입력하신 다음 정보는 <strong>기기 안의 데이터베이스에만</strong> 저장되며 개발자에게 전송되지 않습니다.</p>
+<ul>
+  <li>거래 내역 — 일자, 금액, 계정과목, 적요</li>
+  <li>거래처 정보 — 상호, 사업자등록번호</li>
+  <li>내 사업장 정보 — 상호, 사업자등록번호, 업종, 주소</li>
+  <li>영수증 사진과 그 사진에서 읽어낸 글자</li>
+</ul>
+<p>
+  이 데이터베이스는 기기의 보안 저장소(Android Keystore, iOS 키체인)에 보관된 키로 암호화되어 있어,
+  기기에서 파일을 꺼내더라도 열 수 없습니다.
+</p>
+
+<h2>2. 앱이 외부와 통신하는 경우</h2>
+
+<h3>2-1. 세율·기준금액 내려받기</h3>
+<p>
+  세법은 매년 바뀝니다. 세율과 기준금액(복식부기 의무 기준 등)을 앱에 고정해 두면
+  개정 후 업데이트를 하지 않은 분은 틀린 기준으로 안내받게 됩니다. 그래서 앱은 이 값을 내려받습니다.
+</p>
+<ul>
+  <li><strong>나가는 것</strong> — “세율 파일을 달라”는 요청 하나뿐입니다. 장부, 사업자 정보,
+      회원님을 식별할 수 있는 어떤 값도 함께 보내지 않습니다.</li>
+  <li><strong>받는 것</strong> — 모든 이용자에게 동일한 정적 파일입니다. 따라서 서버는 누가 요청했는지 알 수 없습니다.</li>
+  <li><strong>실패했을 때</strong> — 앱에 들어 있는 값을 그대로 쓰고, 그 사실을 화면에 표시합니다. 이용이 막히지 않습니다.</li>
+</ul>
+<p>
+  다만 모든 인터넷 요청이 그렇듯, 파일을 제공하는 서버에는 접속 시점의 IP 주소가 기록될 수 있습니다.
+  개발자는 이 기록을 이용자 식별이나 분석에 사용하지 않습니다.
+</p>
+
+<h3>2-2. 영수증 글자 인식(OCR) 기능의 진단 정보</h3>
+<p>
+  영수증 사진에서 금액과 상호를 읽어내는 기능은 <strong>Google ML Kit</strong>를 사용합니다.
+  <strong>사진 자체는 기기 밖으로 나가지 않으며, 글자 인식은 기기 안에서 끝납니다.</strong>
+</p>
+<p>
+  그러나 이 구성요소는 자체적으로 <strong>진단·이용 통계를 Google에 전송</strong>합니다.
+  Google이 공개한 명세에 따르면 그 범위는 다음과 같습니다.
+</p>
+<div class="tw">
+<table>
+  <thead><tr><th>항목</th><th>용도</th><th>회원님 신원과의 연결</th></tr></thead>
+  <tbody>
+    <tr><td>기기 식별자</td><td>분석, 기능 제공</td><td>연결되지 않음</td></tr>
+    <tr><td>진단 정보 · 성능 데이터</td><td>분석, 기능 제공</td><td>연결되지 않음</td></tr>
+    <tr><td>기능 이용 기록</td><td>분석, 기능 제공</td><td>연결되지 않음</td></tr>
+  </tbody>
+</table>
+</div>
+<p>
+  이 전송은 <strong>광고 추적에 사용되지 않으며</strong>, 개발자는 이 정보를 받아 보지 않습니다.
+  Google의 처리 기준은 <a href="https://policies.google.com/privacy" rel="noopener">Google 개인정보처리방침</a>을 따릅니다.
+</p>
+<p>
+  <strong>이 전송을 원하지 않으시면 영수증 촬영·인식 기능을 사용하지 않으시면 됩니다.</strong>
+  해당 기능을 쓰지 않는 한 이 구성요소는 동작하지 않으며, 앱의 나머지 기능은 모두 그대로 쓰실 수 있습니다.
+</p>
+
+<h2>3. 앱이 요구하는 권한</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>권한</th><th>언제 묻는가</th><th>무엇에 쓰는가</th></tr></thead>
+  <tbody>
+    <tr><td>인터넷</td><td>묻지 않음(Android 기본)</td><td>2-1의 세율 파일 수신</td></tr>
+    <tr><td>알림</td><td>알림을 켤 때</td><td>신고 기한 안내, 입력 리마인더</td></tr>
+    <tr><td>카메라 (iOS)</td><td>영수증을 처음 촬영할 때</td><td>영수증 촬영</td></tr>
+    <tr><td>사진 (iOS)</td><td>사진첩에서 영수증을 고를 때</td><td>고르신 사진 1장만 읽음</td></tr>
+    <tr><td>생체인증 (iOS)</td><td>앱 잠금을 켤 때</td><td>Face ID / Touch ID로 잠금 해제</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>요구하지 않는 권한</strong> — 문자(SMS), 저장소, 위치, 연락처, 통화기록. 2017년판은 문자를 읽어 카드 내역을 추출했으나 그 기능은 되살리지 않았습니다.</p>
+<p>Android에서는 카메라와 사진첩을 시스템 앱이 대신 열어 결과만 건네주므로, 앱이 카메라·사진 권한을 요구하지 않습니다.</p>
+
+<h2>4. 알림</h2>
+<p>
+  알림은 <strong>신고 기한</strong>(부가가치세·종합소득세)과 <strong>입력 리마인더</strong> 두 가지에만 씁니다.
+  각각 따로 켜고 끌 수 있습니다(메뉴 → 알림).
+</p>
+<ul>
+  <li>알림은 기기 안에서 만들어 기기 안에서 예약됩니다. 서버를 거치지 않으며, 푸시 토큰이나 기기 식별자를 외부로 보내지 않습니다.</li>
+  <li><strong>알림 문구에는 금액도 거래처도 넣지 않습니다.</strong> 알림은 잠금화면에 표시되기 때문입니다.</li>
+</ul>
+
+<h2>5. 홈택스 자료 가져오기</h2>
+<p>
+  회원님이 홈택스에서 <strong>직접 내려받으신 파일</strong>을 골라 주시면 그 내용을 읽어 장부에 넣습니다.
+</p>
+<ul>
+  <li><strong>홈택스 아이디나 비밀번호를 묻지 않으며</strong>, 앱이 홈택스에 대신 접속하지도 않습니다.</li>
+  <li>파일은 기기 안에서만 읽습니다. 어디로도 보내지 않고, 원본 파일을 변경하지 않습니다.</li>
+</ul>
+
+<h2>6. 내보낸 파일과 백업</h2>
+<ul>
+  <li>엑셀·PDF·백업 파일은 <strong>공유 시트를 통해 회원님이 지정한 곳으로만</strong> 나갑니다. 개발자는 그 경로에 관여하지 않습니다.</li>
+  <li>백업 파일은 <strong>회원님이 정한 비밀번호로 암호화</strong>되며, 그 비밀번호는 앱도 개발자도 알지 못합니다.
+      잊으시면 개발자도 열어 드릴 수 없습니다.</li>
+  <li>파일이 기기 밖으로 나간 뒤의 보관과 관리는 회원님의 책임입니다.</li>
+</ul>
+
+<h2>7. 보관 기간과 파기</h2>
+<p>
+  개발자가 보관하는 회원님의 정보가 없으므로, 개발자 측에 파기할 대상이 존재하지 않습니다.
+  기기 안의 정보는 다음 방법으로 회원님이 직접 지우실 수 있습니다.
+</p>
+<ul>
+  <li><strong>개별 삭제</strong> — 앱 안에서 거래·거래처·영수증을 각각 삭제</li>
+  <li><strong>전체 삭제</strong> — 앱을 삭제하면 기기에 저장된 장부도 함께 사라집니다</li>
+</ul>
+<p>
+  <strong>서버에 사본이 없으므로 앱을 지우면 복구할 수 없습니다.</strong> 백업을 미리 만들어 두시기 바랍니다.
+</p>
+
+<h2>8. 제3자 제공 및 처리위탁</h2>
+<p>개발자는 회원님의 개인정보를 제3자에게 제공하거나 처리를 위탁하지 않습니다. 다만 2-2에 적은 대로, 영수증 인식 기능을 사용하실 경우 해당 구성요소가 신원과 연결되지 않는 진단 정보를 Google에 전송합니다.</p>
+
+<h2>9. 만 14세 미만 아동</h2>
+<p>이 앱은 사업자의 장부 작성을 위한 도구로, 만 14세 미만 아동을 대상으로 하지 않으며 아동의 개인정보를 수집하지 않습니다.</p>
+
+<h2>10. 정보주체의 권리</h2>
+<p>
+  개발자가 회원님의 개인정보를 보유하고 있지 않으므로, 열람·정정·삭제·처리정지 요구의 대상이 되는 보유 정보가 없습니다.
+  기기 안의 정보에 대해서는 회원님이 앱을 통해 언제든지 직접 열람·수정·삭제하실 수 있습니다.
+</p>
+
+<h2>11. 안전성 확보 조치</h2>
+<ul>
+  <li><strong>저장 시 암호화</strong> — 장부 데이터베이스를 암호화하고, 키는 Android Keystore / iOS 키체인에 보관합니다.</li>
+  <li><strong>앱 잠금</strong> — PIN 또는 생체인증으로 앱 진입을 막을 수 있습니다.</li>
+  <li><strong>전송 구간 암호화</strong> — 세율 파일은 HTTPS로만 받습니다.</li>
+  <li><strong>설계에 의한 최소 수집</strong> — 장부를 외부로 보내는 코드가 없다는 사실을 자동화된 검사로 매 빌드마다 확인합니다.</li>
+</ul>
+
+<h2>12. 개인정보 보호책임자 및 문의</h2>
+<div class="tw">
+<table>
+  <tbody>
+    <tr><th>상호</th><td>DEV-AI</td></tr>
+    <tr><th>대표자</th><td>조문기</td></tr>
+    <tr><th>개인정보 보호책임자</th><td>조문기 / 개발자</td></tr>
+    <tr><th>문의</th><td>dimkcho@gmail.com</td></tr>
+    <tr><th>주소</th><td>경기도 수원시 장안구 파장로</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>13. 권익침해 구제 방법</h2>
+<p>개인정보 침해에 관한 상담과 신고는 아래 기관에 하실 수 있습니다.</p>
+<ul>
+  <li>개인정보 침해신고센터 — 국번없이 118 · <a href="https://privacy.kisa.or.kr" rel="noopener">privacy.kisa.or.kr</a></li>
+  <li>개인정보 분쟁조정위원회 — 1833-6972 · <a href="https://www.kopico.go.kr" rel="noopener">kopico.go.kr</a></li>
+  <li>대검찰청 사이버수사과 — 국번없이 1301</li>
+  <li>경찰청 사이버수사국 — 국번없이 182</li>
+</ul>
+
+<h2>14. 방침의 변경</h2>
+<p>
+  이 방침이 바뀌면 변경 내용과 시행일을 이 페이지에 게시하고, 앱 업데이트 시 안내합니다.
+  회원님께 불리한 변경은 시행 30일 전부터 알립니다.
+</p>
+
+<footer>
+  스마트간편장부 개인정보처리방침 · 시행일 2026-10-01<br>
+  이 앱은 장부 작성 도구이며, 세무 상담이나 신고 대행을 하지 않습니다.
+</footer>
+
+</main>
+</body>
+</html>
